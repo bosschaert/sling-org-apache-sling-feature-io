@@ -71,7 +71,6 @@ abstract class JSONWriterBase {
                     generator.writeStartObject();
                     generator.write(JSONConstants.ARTIFACT_ID, artifact.getId().toMvnId());
 
-
                     Object runmodes = md.remove("runmodes");
                     if (runmodes instanceof String) {
                         md.put("run-modes", (String) runmodes);
