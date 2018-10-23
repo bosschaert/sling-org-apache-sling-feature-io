@@ -66,6 +66,7 @@
                 <configuration>
                     <excludes>
                         <exclude>readme.md</exclude>
+                        <exclude>src/main/resources/META-INF/services/*</exclude>                        
                     </excludes>
                 </configuration>
             </plugin>
