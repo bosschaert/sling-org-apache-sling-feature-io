@@ -16,14 +16,14 @@
  */
 package org.apache.sling.feature.io.json;
 
+import org.apache.sling.feature.Configuration;
+import org.apache.sling.feature.Configurations;
+import org.apache.sling.feature.Feature;
+
 import java.io.IOException;
 import java.io.Writer;
 
 import javax.json.stream.JsonGenerator;
-
-import org.apache.sling.feature.Configuration;
-import org.apache.sling.feature.Configurations;
-import org.apache.sling.feature.Feature;
 
 /**
  * Simple JSON writer for a feature
@@ -71,8 +71,8 @@ public class FeatureJSONWriter extends JSONWriterBase {
         // variables
         writeVariables(generator, feature.getVariables());
 
-        // include
-        writeInclude(generator, feature.getInclude());
+        // prototype
+        writePrototype(generator, feature.getPrototype());
 
         // requirements
         writeRequirements(generator, feature.getRequirements());

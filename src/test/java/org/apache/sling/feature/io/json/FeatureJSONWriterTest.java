@@ -83,7 +83,7 @@ public class FeatureJSONWriterTest {
 
     @Test public void testIncludeWriteRead() throws Exception {
         final Feature f = U.readFeature("test");
-        assertNotNull(f.getInclude());
+        assertNotNull(f.getPrototype());
 
         final Feature rf;
         try ( final StringWriter writer = new StringWriter() ) {
@@ -92,7 +92,7 @@ public class FeatureJSONWriterTest {
                 rf = FeatureJSONReader.read(reader, null);
             }
         }
-        assertEquals(f.getInclude().getId(), rf.getInclude().getId());
+        assertEquals(f.getPrototype().getId(), rf.getPrototype().getId());
     }
 
     @Test public void testRepoInitWrite() throws Exception {
